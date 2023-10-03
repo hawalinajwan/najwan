@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'font Awesome 5 Brands';
+    font-style: normal;
+    src: url(/font/fa-brands-400.woff2) format('woff2'), url(/font/fa-brands-400.ttf) format('truetype');
+}
+
+.fa-brands{font-family: 'font Awesome 5 Brands';}
+.instagram:before{content: '\f16d'}
+.spotify:before{content: '\f1bc'}
+.discord:before{content: '\f392'}
+.github:before{content: '\f09b'}
+.che:before{content: '\f78c'}

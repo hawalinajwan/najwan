@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: ;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+    
+  }
+  
+body {
+    -ms-overflow-style: none; 
+
+     
+    
+  }
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateZ(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateZ(0);
+}
+
+.container {
+    margin: 0 auto;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #635985, #443C68);
+    padding-bottom: 20vh;
+}
+
+.main h1 {
+    font-size: 10rem;
+    font-family: Arial, sans-serif;
+    color: #FFF2D8;
+}
+
+.about-me-button {
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Style for the Font Awesome icon */
+.about-me-button i {
+    align-items: center;
+    margin-top: 2vh;
+    animation: bounce 2s infinite; 
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+.about {
+    
+    margin: 0;
+    padding: 30vh 20vh;
+    display:flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    background: linear-gradient(to bottom, #443C68, #393053);
+}
+
+.about .profile {
+    width: 50%;
+    padding: 0 20px;
+    flex: 45%;
+}
+
+.about .zeta img {
+    width: 50vh;
+    height: auto;
+}
+
+.about .zeta {
+    width: 175px;
+    flex: 45%;
+    z-index: 1000;
+}
+
+.about .profile h2 {
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    color: #EAD7BB;
+}
+
+.about .profile p {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #FFF2D8;
+    margin-top: 20px;
+}
+
+.about .profile ul {
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+}
+
+.about .profile ul li {
+    margin-right: 20px;
+}
+
+.about .profile ul li a {
+    font-size: 24px;
+    color: #fff56b;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.about .profile ul li a:hover {
+  color: white;
+}
+
+.about .profile .discord-button {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #8EAC50;
+    animation: bounce 4s infinite;
+}
+
+.about .profile .discord-button:hover {
+    background-color: #73b161; 
+}
+
+
+.gallery {
+    width: 100%;
+    display: flex;
+    padding-top: 50vh;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10vh; 
+    background: linear-gradient(to bottom, #393053, #18122B);
+    padding-bottom: 20vh;
+}
+
+.gallery img {
+    width: calc(30% - 10px); 
+    height: auto; 
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.gallery img:nth-child(odd) {
+    margin-right: 10px;
+}
+
+.gallery img:first-child {
+    margin-top: 0;
+}
+
+.gallery img:hover {
+    box-shadow: 0px 0px 30px rgba(175, 175, 175, 0.6);
+    cursor: pointer;
+  }
+
+
+.footer {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #18122B, #003829);
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.heart {
+    animation: pulse 2s infinite;
+}
+
+.footer .footerrr {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+    .main h1 {
+        font-size: 5rem;
+        font-family: Arial, sans-serif;
+        color: #FFF2D8;
+    }  
+ 
+    
+    .about .profile {
+        width: 50%;
+    }
+    
+    .about .zeta {
+        width: 50%;
+    }
+
+    .about .zeta img{
+        width: 100%;
+        height: auto;
+    }
+    .about .profile h2 {
+        font-size: 3rem;
+
+    }
+    .about .profile p {
+        font-size: 3rem;
+    }
+    .about .profile p {
+        font-size: 1.5rem;
+    }
+    .gallery {
+        gap: 5vh;
+    }
+    .gallery img {
+        width: calc(40% - 10px); 
+    }
+    #clouds2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .about {
+        padding-left: 10%;
+    }
+    .about .profile {
+        width: 40%;
+    }
+    .about .zeta {
+        display: none;
+    }
+    #cloud {
+        display: none;
+    }
+    #cloud2 {
+        display: none;
+    }
+    .about .profile h2 {
+        font-size: 3rem;
+
+    }
+    .about .profile p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about {
+        padding-left: 10%;
+    }
+    .about .profile {
+        width: 40%;
+    }
+    
+    .about .profile h2 {
+        font-size: 3rem;
+
+    }
+    .about .profile p {
+        font-size: 1.5rem;
+    }
+    .gallery {
+        gap: 5vh;
+    }
+    .gallery img {
+        width: calc(80% - 10px); 
+    }
+   #cloud {
+    width: 100%;
+   }
+   #clouds2 {
+    display: none;
+   }
+
+}
+
+@media screen and (max-width: 500px){
+    .main h1{
+        font-size: 3rem;
+    }
+    .about-me-button {
+        font-size: 14px;
+    }
+    .zeta img{
+        display: none;
+        width: 0%;
+    }
+    .about .profile h2 {
+        font-size: 2.5rem;
+        font-family: Arial, sans-serif;
+        color: #EAD7BB;
+    }
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 4rem;
+    }
+    .about .profile{
+        width: 95%;
+    }
+    .about .profile p {
+        font-size: 1.5rem;
+    }
+   
+    
+    .about .profile ul li {
+        margin-right: 20px
+    }
+    
+    .about .profile ul li a {
+        font-size: 40px;
+        color: #EAD7BB;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    #cloud {
+        display: none;
+    }
+    #clouds2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .zeta img{
+        display: none;
+        width: 0%;
+    }
+
+    .about .profile{
+        width: 90%;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+    #cloud {
+        display: none;
+    }
+    #clouds2 {
+        display: none;
+    }
+}
+
+
+#cloud {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    top: 50%;
+    left: -100vh;
+    background: url('/src/clouds1.webp') no-repeat;
+    transition: left 4s ease-in; 
+    animation: bounce 3s infinite;
+}
+
+#cloud2 {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    right: -100vh;
+    background: url('/src/clouds2.webp') no-repeat;
+    transition: right 4s ease-in; 
+    animation: bounce 4s infinite;
+}
