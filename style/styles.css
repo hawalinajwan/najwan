@@ -7,14 +7,14 @@
 
 body::-webkit-scrollbar {
     display: none;
-    
+
   }
-  
+
 body {
     -ms-overflow-style: none; 
 
-     
-    
+
+
   }
 .hidden {
     opacity: 0;
@@ -43,7 +43,8 @@ body {
 }
 
 .main h1 {
-    font-size: 10rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px #18122B, 0 0 5px #003829;
+    font-size: 9rem;
     font-family: Arial, sans-serif;
     color: #FFF2D8;
 }
@@ -51,7 +52,7 @@ body {
 .about-me-button {
     display: flex;
     align-items: center;
-
+    text-shadow: 1px 1px 2px black, 0 0 25px #18122B, 0 0 5px #003829;
     color: #fff;
     text-align: center;
     padding: 10px 20px;
@@ -64,7 +65,6 @@ body {
     flex-direction: column;
 }
 
-/* Style for the Font Awesome icon */
 .about-me-button i {
     align-items: center;
     margin-top: 2vh;
@@ -85,7 +85,7 @@ body {
 
 
 .about {
-    
+
     margin: 0;
     padding: 30vh 20vh;
     display:flex;
@@ -112,12 +112,14 @@ body {
 }
 
 .about .profile h2 {
+    text-shadow: 1px 1px 2px black, 0 0 25px #18122B, 0 0 5px #003829;
     font-size: 3rem;
     font-family: Arial, sans-serif;
     color: #EAD7BB;
 }
 
 .about .profile p {
+    text-shadow: 1px 1px 2px black, 0 0 25px #18122B, 0 0 5px #003829;
     font-size: 1.5rem;
     font-family: Arial, sans-serif;
     color: #FFF2D8;
@@ -135,6 +137,7 @@ body {
 }
 
 .about .profile ul li a {
+    text-shadow: 1px 1px 2px black, 0 0 25px #18122B, 0 0 5px #003829;
     font-size: 24px;
     color: #fff56b;
     text-decoration: none;
@@ -144,23 +147,88 @@ body {
   color: white;
 }
 
-.about .profile .discord-button {
-    display: block;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 20px;
+.trapdoor {
+    font-family: Arial, sans-serif;
+    color: #FFF2D8;
     text-decoration: none;
-    border-radius: 5px;
+    display: block;
     font-size: 18px;
-    background-color: #8EAC50;
-    animation: bounce 4s infinite;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 75%;
+    height: 50px;
+    transition:  400ms ease-in-out;
 }
 
-.about .profile .discord-button:hover {
-    background-color: #73b161; 
-}
+
+  .trapdoor:hover {
+    background: #e8fa99;
+  }
+
+  .trapdoor:hover .door {
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+    transform: scale(1.08);
+  }
+
+  .trapdoor:hover .top {
+    top: -50%;
+  }
+
+  .trapdoor:hover .bottom {
+    top: 100%;
+  }
+
+  .trapdoor .discord-button {
+    margin: 10%;
+    position: absolute !important;
+    margin-top: -20px;
+    top: 25%;
+    color: #3b3b3b;
+  }
+
+  .top {
+    top: 0%;
+    left: 0;
+  }
+
+  .top:before {
+    top: 5px;
+  }
+
+  .bottom {
+    top: 50%;
+    left: 0;
+  }
+
+  .bottom:before {
+    top: -20px;
+  }
+
+  .door {
+    border-radius: 4px;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    transition-timing-function: ease-in-out;
+    background-color: #8EAC50;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    height: 55%;
+  }
+
+  .door:before {
+    display: block;
+    position: absolute;
+    font-size: 17px;
+    display: block;
+    padding: 1% 30%;
+
+    text-align: center;
+    content: "Join Server Discord";
+  }
 
 
 .gallery {
@@ -220,6 +288,27 @@ body {
 .heart {
     animation: pulse 2s infinite;
 }
+.heart {
+    --m:
+      radial-gradient(circle farthest-side at right,#000 99%,#0000) 
+        0 100%/46% 92% no-repeat,
+      radial-gradient(circle farthest-side at left ,#000 99%,#0000) 
+        100% 0/46% 92% no-repeat;
+    -webkit-mask: var(--m);
+            mask: var(--m);
+    filter: grayscale(.5);
+    transition: .3s linear;
+    cursor: pointer;
+  }
+  .heart:hover {
+    -webkit-mask-position: 7.5% 50%,92.5% 50%;
+            mask-position: 7.5% 50%,92.5% 50%;
+    filter: grayscale(0);
+  }
+
+a:link {
+    text-decoration: none;
+  }
 
 .footer .footerrr {
     font-size: 1.2rem;
@@ -233,12 +322,12 @@ body {
         font-family: Arial, sans-serif;
         color: #FFF2D8;
     }  
- 
-    
+
+
     .about .profile {
         width: 50%;
     }
-    
+
     .about .zeta {
         width: 50%;
     }
@@ -294,13 +383,16 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+    .main h1 {
+    font-size: 3rem;
+    }
     .about {
         padding-left: 10%;
     }
     .about .profile {
         width: 40%;
     }
-    
+
     .about .profile h2 {
         font-size: 3rem;
 
@@ -350,12 +442,12 @@ body {
     .about .profile p {
         font-size: 1.5rem;
     }
-   
-    
+
+
     .about .profile ul li {
         margin-right: 20px
     }
-    
+
     .about .profile ul li a {
         font-size: 40px;
         color: #EAD7BB;
